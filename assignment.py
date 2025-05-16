@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-original_image = cv2.imread(r"C:\Users\AC\Pictures\penguin.jpg")  # تأكد من صحة المسار
+original_image = cv2.imread(r"C:\Users\AC\Pictures\penguin.jpg") 
 
 #1. Read an Image
 cv2.imshow("Original Image", original_image)
@@ -54,7 +54,6 @@ watermark = cv2.imread("C:\\Users\\AC\\Pictures\\SH.png", cv2.IMREAD_UNCHANGED)
 watermark.shape[2] == 4
 watermark = cv2.cvtColor(watermark, cv2.COLOR_BGRA2BGR)
 
-   
 width_cm, height_cm = 4,4 
 dpi = 200 
 new_w, new_h = int(width_cm * dpi / 2.54), int(height_cm * dpi / 2.54)
