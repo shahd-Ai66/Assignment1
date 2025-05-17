@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 
-
 original_image = cv2.imread(r"C:\Users\AC\Pictures\penguin.jpg")  
 
 #1. Read an Image
@@ -84,9 +83,6 @@ merged_image = np.vstack((hsv, gray_colored, lab))
 cv2.imshow("Color Space Conversion (HSV, Grayscale, LAB)", merged_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
-
-
 
 
 
