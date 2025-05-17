@@ -1,6 +1,8 @@
 import cv2
 import numpy as np
 
+
+
 original_image = cv2.imread(r"C:\Users\AC\Pictures\penguin.jpg")  
 
 #1. Read an Image
@@ -46,13 +48,13 @@ cv2.imshow("Thresholding", thresh)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-#7. Add a watermark at the top and reduce its size to 4x4 cm
+#7. Add a watermark at the top and reduce its size to 2x2 cm
 image = original_image.copy()
 watermark = cv2.imread("C:\\Users\\AC\\Pictures\\SH.png", cv2.IMREAD_UNCHANGED)
 
 watermark = cv2.cvtColor(watermark, cv2.COLOR_BGRA2BGR)
    
-width_cm, height_cm = 4,4 
+width_cm, height_cm = 1.4,1.4
 dpi = 200 
 new_w, new_h = int(width_cm * dpi / 2.54), int(height_cm * dpi / 2.54)
 watermark_resized = cv2.resize(watermark, (new_w, new_h))
@@ -83,6 +85,7 @@ merged_image = np.vstack((hsv, gray_colored, lab))
 cv2.imshow("Color Space Conversion (HSV, Grayscale, LAB)", merged_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
 
 
 
