@@ -48,7 +48,7 @@ cv2.imshow("Thresholding", thresh)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-#7. Add a watermark at the top and reduce its size to 2x2 cm
+#7. Add a watermark at the top and reduce its size to 1.4x1.4 cm
 image = original_image.copy()
 watermark = cv2.imread("C:\\Users\\AC\\Pictures\\SH.png", cv2.IMREAD_UNCHANGED)
 
